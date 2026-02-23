@@ -16,7 +16,7 @@ app.use(clerkMiddleware());
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
 app.get("/", (req,res) => {
-    console.log("Server Is Running!")
+    res.send("Server Is Running!")
 })
 
 const PORT = process.env.PORT || 3000;
